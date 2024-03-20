@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Graph</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        canvas {
+            border: 1px solid black;
+            display: block;
+        }
+
+        div {
+            margin-top: 10px;
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        hr {
+            border-bottom: 2px solid black;
+            margin-top: 10px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        #dataInfo {
+            margin-left: 10px;
+            flex: 1;
+            min-width: 0;
+        }
+        #graphContainer {
+            flex: 0 0 auto;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <hr />
+    <div>
+        <input type="text" id="start" placeholder="Start Node" />
+        <input type="text" id="end" placeholder="End Node" />
+        <button onclick="mapPoints()">Click me!</button>
+    </div>
+    <hr />
+    <div class="container">
+        <div id="graphContainer">
+            <canvas id="graph" width="500" height="500"></canvas>
+            <h3>Info:</h3>
+            <p>Red indicates a leaf vertex</p>
+            <p>Green is the start node</p>
+            <p>Blue is the end node</p>
+        </div>
+        <div id="dataInfo">
+        </div>
+    </div>
+    <hr />
+    <div>
+        <input type="text" id="node" placeholder="Node" />
+        <input type="text" id="x" placeholder="X" />
+        <input type="text" id="y" placeholder="Y" />
+        <button onclick="addNode()">Add Node</button>
+    </div>
+    <div>
+        <input type="text" id="nodeRemove" placeholder="Node" />
+        <button onclick="removeNode()">Remove Node</button>
+    </div>
+    <hr />
+    <div>
+        <input type="text" id="startEdge" placeholder="Start Node" />
+        <input type="text" id="endEdge" placeholder="End Node" />
+        <button onclick="addEdge()">Add Edge</button>
+    </div>
+    <div>
+        <input type="text" id="startEdgeRemove" placeholder="Start Node" />
+        <input type="text" id="endEdgeRemove" placeholder="End Node" />
+        <button onclick="removeEdge()">Remove Edge</button>
+    </div>
+    <hr />
+    <div>
+        <button onclick="testData()">Use Test Data</button>
+        <button onclick="clearData()">Clear Data</button>
+    </div>
+    <hr />
+
+    <script src="index2.js"></script>
+
+</body>
+
+</html>
